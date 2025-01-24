@@ -19,7 +19,11 @@ int main(void)
 
     string cardType = get_card_type(cardNumber);
 
-    printf("%s\n", cardType);
+    if(cardType == "AMEX")
+    {
+
+    }
+    else if()
 
 }
 
@@ -56,5 +60,5 @@ string get_card_type(long number)
 
 bool luhn_validate(long number)
 {
-    
+
 }
