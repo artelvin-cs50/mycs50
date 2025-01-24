@@ -16,9 +16,9 @@ string get_card_type(int length, int digits)    // Function to identify card typ
 int main(void)
 {
     // Prompt user for card number
-    long card_number = get_long("Number: ");
+    long cardNumber = get_long("Number: ");
 
-    
+    string cardType = get_card_type(get_length(cardNumber), get_initial_digits())
 
 }
 
