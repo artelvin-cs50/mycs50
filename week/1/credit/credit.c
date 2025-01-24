@@ -8,8 +8,6 @@
 // Visa uses 13- and 16-digit numbers | Visa numbers start with 4
 
 
-// int get_length(long number);    // Function to get card length
-// int get_initial_digits(long number, int length)    // Function to get card's initial digits
 string get_card_type(long number);    // Function to identify card type using length and initial digits
 
 
@@ -23,24 +21,6 @@ int main(void)
     printf("%s\n", cardType);
 
 }
-
-
-// int get_length(long number)
-// {
-//     int count = 0;
-//     while(number > 0)
-//     {
-//         number /= 10;
-//         count++;
-//     }
-//     return count;
-// }
-
-
-// int get_initial_digits(long number, int length)
-// {
-//     return number / (pow(length - 2));
-// }
 
 
 string get_card_type(long number)
