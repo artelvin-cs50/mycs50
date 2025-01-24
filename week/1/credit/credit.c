@@ -54,7 +54,9 @@ string get_card_type(long number)
 
     printf("%d\n", length);
 
-    int digits = number / (pow(10, length - 2));
+    number = number / pow(10, 14);
+    printf("%ld\n", number);
+    int digits = (int) number;
     printf("%d\n", digits);
 
     if(length == 15 && (digits == 34 || digits == 37))
