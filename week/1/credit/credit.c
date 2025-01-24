@@ -9,13 +9,21 @@
 
 
 string get_card_type(long number);    // Function to identify card type using length and initial digits
-bool luhn_validate(long number);    // Function to validate card using Luhn's algorithm
+bool luhn_valid(long number);    // Function to validate card using Luhn's algorithm
 
 
 int main(void)
 {
     // Prompt user for card number
     long cardNumber = get_long("Number: ");
+
+    if(luhn_validate(cardNumber))
+    {
+        if(cardType == "AMEX")
+        {
+            ""
+        }
+    }
 
     string cardType = get_card_type(cardNumber);
 }
@@ -51,7 +59,7 @@ string get_card_type(long number)
 }
 
 
-bool luhn_validate(long number)
+bool luhn_valid(long number)
 {
     int sum = 0;
     while(number > 0)
