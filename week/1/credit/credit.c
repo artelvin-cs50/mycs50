@@ -45,6 +45,7 @@ int main(void)
 
 string get_card_type(long number)
 {
+    printf("%ld\n", number);
     int length = 0;
     while(number > 0)
     {
@@ -54,10 +55,9 @@ string get_card_type(long number)
 
     printf("%d\n", length);
 
-    number = number / pow(10, 14);
-    printf("%ld\n", number);
-    int digits = (int) number;
-    printf("%d\n", digits);
+    double digitsTwo = (double)number / 100000000000000.0;
+    printf("%f\n", digitsTwo);
+    int digits = digitsTwo;
 
     if(length == 15 && (digits == 34 || digits == 37))
     {
