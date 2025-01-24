@@ -17,15 +17,26 @@ int main(void)
     // Prompt user for card number
     long cardNumber = get_long("Number: ");
 
-    if(luhn_validate(cardNumber))
+    string cardType = get_card_type(cardNumber);
+
+    if(luhn_valid(cardNumber))
     {
         if(cardType == "AMEX")
         {
-            ""
+            printf("AMEX\n");
+        }
+        else if(cardType == "MASTERCARD")
+        {
+            printf("MASTERCARD\n");
+        }
+        else if(cardType == "VISA")
+        {
+            printf("VISA\n");
+        } else {
+            printf("INVALID\n");
         }
     }
 
-    string cardType = get_card_type(cardNumber);
 }
 
 
