@@ -10,13 +10,13 @@
 
 // int get_length(long number);    // Function to get card length
 // int get_initial_digits(long number, int length)    // Function to get card's initial digits
-string get_card_type(long number);    // Function to identify card type using length and initial digits
+string get_card_type(long long number);    // Function to identify card type using length and initial digits
 
 
 int main(void)
 {
     // Prompt user for card number
-    long cardNumber = get_long("Number: ");
+    long long cardNumber = get_long("Number: ");
 
     string cardType = get_card_type(cardNumber);
 
@@ -43,9 +43,9 @@ int main(void)
 // }
 
 
-string get_card_type(long number)
+string get_card_type(long long number)
 {
-    printf("%ld\n", number);
+    printf("%lld\n", number);
     int length = 0;
     while(number > 0)
     {
@@ -54,7 +54,7 @@ string get_card_type(long number)
     }
 
     printf("%d\n", length);
-    printf("%f\n", (double) number / 2);
+    printf("%lld\n", number / 2);
 
     int digits = 0;
 
