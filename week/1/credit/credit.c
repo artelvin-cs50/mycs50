@@ -8,7 +8,7 @@
 // Visa uses 13- and 16-digit numbers | Visa numbers start with 4
 
 
-string get_card_type(long number);    // Function to identify card type using length and initial digits
+char get_card_type(long number);    // Function to identify card type using length and initial digits
 bool luhn_valid(long number);    // Function to validate card using Luhn's algorithm
 
 
@@ -17,19 +17,19 @@ int main(void)
     // Prompt user for card number
     long cardNumber = get_long("Number: ");
 
-    string cardType = get_card_type(cardNumber);
+    char cardType = get_card_type(cardNumber);
 
     if(luhn_valid(cardNumber))
     {
-        if(cardType == "AMEX")
+        if(cardType == 'A')
         {
             printf("AMEX\n");
         }
-        else if(cardType == "MASTERCARD")
+        else if(cardType == 'M')
         {
             printf("MASTERCARD\n");
         }
-        else if(cardType == "VISA")
+        else if(cardType == 'V')
         {
             printf("VISA\n");
         } else {
@@ -40,7 +40,7 @@ int main(void)
 }
 
 
-string get_card_type(long number)
+char get_card_type(long number)
 {
     int length = 0;
     long numberTemp = number;
@@ -55,18 +55,18 @@ string get_card_type(long number)
 
     if(length == 15 && (digits == 34 || digits == 37))
     {
-        return "AMEX";
+        return 'A';
     }
     else if(length == 16 && (digits >= 51 && digits <= 55))
     {
-        return "MASTERCARD";
+        return 'M';
     }
     else if((length == 13 || length == 16) && (digits >= 40 && digits <= 49))
     {
-        return "VISA";
+        return 'V';
     }
     else
-        return "INVALID";
+        return 'I';
 }
 
 
@@ -90,8 +90,6 @@ bool luhn_valid(long number)
 
         number /= 10;
     }
-
-    printf("%d\n", sum);
 
     if(sum % 10 == 0)
         return true;
