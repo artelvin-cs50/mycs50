@@ -67,10 +67,13 @@ bool luhn_validate(long number)
 
         number /= 10;       // Go to next digit
 
-        if(((number % 10) * 2) >= 10)
+        if(((number % 10) * 2) >= 10)       // Check if the product of the multiplied digit has two digits
         {
             int product = (number % 10) * 2;
-            sum += (product % 10)
+            sum += (product % 10);
+            sum += (product / 10);
+        } else {
+            sum += (number % 10) * 2;
         }
     }
 }
