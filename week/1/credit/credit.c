@@ -9,7 +9,7 @@
 
 
 int get_length(long number);    // Function to get card length
-int get_initial_digits(long number, int length)    // Function to get card's first two digits (or only first for VISA)
+int get_initial_digits(long number, int length)    // Function to get card's initial digits
 
 
 int main(void)
@@ -29,4 +29,10 @@ int get_length(long number)
         count++;
     }
     return count;
+}
+
+
+int get_initial_digits(long number, int length)
+{
+    return number / (pow(length - 2));
 }
