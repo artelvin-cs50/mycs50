@@ -17,5 +17,16 @@ int main(void)
     // Prompt user for card number
     long card_number = get_long("Number: ");
 
+}
 
+
+int get_length(long number)
+{
+    int count = 0;
+    while(number > 0)
+    {
+        number /= 10;
+        count++;
+    }
+    return count;
 }
