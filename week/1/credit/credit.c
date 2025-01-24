@@ -18,13 +18,6 @@ int main(void)
     long cardNumber = get_long("Number: ");
 
     string cardType = get_card_type(cardNumber);
-
-    if(cardType == "AMEX")
-    {
-
-    }
-    else if()
-
 }
 
 
@@ -75,5 +68,14 @@ bool luhn_validate(long number)
         } else {
             sum += (number % 10) * 2;
         }
+
+        number /= 10;
     }
+
+    printf("%d\n", sum);
+
+    if(sum % 10 == 0)
+        return true;
+    else
+        return false;
 }
