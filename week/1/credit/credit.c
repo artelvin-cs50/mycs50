@@ -55,7 +55,7 @@ string get_card_type(long number)
 
     printf("%d\n", length);
 
-    double digitsTwo = (double)number / 100000000000000.0;
+    double digitsTwo = (double)number / 1000.0;
     printf("%f\n", digitsTwo);
     int digits = digitsTwo;
 
