@@ -9,6 +9,7 @@
 
 
 string get_card_type(long number);    // Function to identify card type using length and initial digits
+bool luhn_validate(long number);    // Function to validate card using Luhn's algorithm
 
 
 int main(void)
@@ -50,4 +51,10 @@ string get_card_type(long number)
     }
     else
         return "INVALID";
+}
+
+
+bool luhn_validate(long number)
+{
+    
 }
