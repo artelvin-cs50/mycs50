@@ -67,6 +67,10 @@ bool luhn_validate(long number)
 
         number /= 10;       // Go to next digit
 
-        if()
+        if(((number % 10) * 2) >= 10)
+        {
+            int product = (number % 10) * 2;
+            sum += (product % 10)
+        }
     }
 }
