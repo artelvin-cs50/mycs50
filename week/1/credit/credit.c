@@ -60,5 +60,13 @@ string get_card_type(long number)
 
 bool luhn_validate(long number)
 {
+    int sum = 0;
+    while(number > 0)
+    {
+        sum += number % 10;     // Start by adding the last digit (which belongs to the digits that aren't multiplied by 2) to the total sum
 
+        number /= 10;       // Go to next digit
+
+        if()
+    }
 }
