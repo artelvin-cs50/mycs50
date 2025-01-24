@@ -45,18 +45,16 @@ int main(void)
 
 string get_card_type(long number)
 {
-    printf("%ld\n", number);
     int length = 0;
-    while(number > 0)
+    long numberTemp = number;
+    while(numberTemp > 0)
     {
-        number /= 10;
+        numberTemp /= 10;
         length++;
     }
 
-    printf("%d\n", length);
-    printf("%f\n", (double) number / 2);
+    int digits = number / pow(10, (long)length - 2);
 
-    int digits = 0;
 
     if(length == 15 && (digits == 34 || digits == 37))
     {
