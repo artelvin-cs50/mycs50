@@ -54,10 +54,9 @@ string get_card_type(long number)
     }
 
     printf("%d\n", length);
+    printf("%f\n", (double) number / 2);
 
-    double digitsTwo = (double)number / 1000.0;
-    printf("%f\n", digitsTwo);
-    int digits = digitsTwo;
+    int digits = 0;
 
     if(length == 15 && (digits == 34 || digits == 37))
     {
