@@ -93,7 +93,7 @@ bool luhn_valid(long number)
         number /= 10;
     }
 
-    if(sum % 10 == 0)       //
+    if(sum % 10 == 0)
         return true;
     else
         return false;
