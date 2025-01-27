@@ -13,7 +13,7 @@ int main(void)
     // Build pyramid
     for(int i = 0; i < height; i++)
     {
-        for(int j = height - 1; j > i; j--) // Print `(height - 1) - i` blankspaces
+        for(int j = 0; j < (height - i) - 1; j++) // Print `(height - 1) - i` blankspaces
         {
             printf(" ");
         }
